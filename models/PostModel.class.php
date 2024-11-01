@@ -22,6 +22,13 @@
         $this->mysqli->query($sql);
     }
 
+    public function update($id, $title, $content)
+    {
+        $sql = "UPDATE post SET title = '$title', content = '$content' WHERE id = $id";
+
+        $this->mysqli->query($sql);
+    }
+
     public function delete($id)
     {
         $sql = "DELETE FROM post WHERE id = $id";

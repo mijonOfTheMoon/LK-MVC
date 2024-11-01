@@ -1,8 +1,9 @@
+<h1>Posts</h1>
 <a href="?c=Post&m=create">Create Post</a>
 <?php
 
 if (!$posts->num_rows) {
-    echo 'No posts.';
+    echo '<br> No posts.';
 } else {
     while ($post = $posts->fetch_object()) {
         echo "<h3>$post->title</h3>";
